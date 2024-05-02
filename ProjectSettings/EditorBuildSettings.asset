@@ -8,3 +8,5 @@ EditorBuildSettings:
   m_configObjects:
     Varjo.XR.Settings: {fileID: 11400000, guid: a90b4851ea40f0b40a2a967eefef4bae, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: cbcff64436750af4c9f64c8293dd287d, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 577caffcb60fb4b4fb50310a57014920, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 97cb8b94feb93d74aa2d748e1b0b70fa, type: 2}
