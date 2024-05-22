@@ -33,6 +33,10 @@ public class VarjoMarkerManager : MonoBehaviour
         
     }
 
+    public void buttonClick(){
+        Debug.Log("click");
+    }
+
     // Update is called once per frame
     void Update()
     {
