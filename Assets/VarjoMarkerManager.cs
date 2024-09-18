@@ -7,10 +7,13 @@ public class VarjoMarkerManager : MonoBehaviour
 {
 
     [Serializable]
-    public struct TrackedObject{
+    public struct TrackedObject
+    {
         public long id;
         public GameObject gameObject;
         public bool dynamicTracking;
+
+        public bool alreadyPlaced;
     }
 
     public TrackedObject[] trackedObjects = new TrackedObject[1];
@@ -19,21 +22,19 @@ public class VarjoMarkerManager : MonoBehaviour
 
     private List<long> removedMarkerIds = new List<long>();
 
-    private void OnEnable(){
+    private void OnEnable()
+    {
         VarjoMarkers.EnableVarjoMarkers(true);
     }
 
-    private void OnDisable(){
+    private void OnDisable()
+    {
         VarjoMarkers.EnableVarjoMarkers(false);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    public void buttonClick(){
+    public void buttonClick()
+    {
         Debug.Log("click");
     }
 
@@ -41,25 +42,28 @@ public class VarjoMarkerManager : MonoBehaviour
     void Update()
     {
         // Check if Varjo Marker tracking is enabled and functional.
-    if (VarjoMarkers.IsVarjoMarkersEnabled())
-    {
-        // Get a list of markers with up-to-date data.
-        VarjoMarkers.GetVarjoMarkers(out markers);
-
-        // Loop through found markers and update gameobjects matching the marker ID in the array.
-        foreach (var marker in markers)
+        if (VarjoMarkers.IsVarjoMarkersEnabled())
         {
-            for (var i = 0; i < trackedObjects.Length; i++)
-            {
-                if (trackedObjects[i].id == marker.id)
-                {
-                    // This simple marker manager controls only visibility and pose of the GameObjects.
-                    trackedObjects[i].gameObject.SetActive(true);
-                    trackedObjects[i].gameObject.transform.localPosition = marker.pose.position;
-                    trackedObjects[i].gameObject.transform.localRotation = marker.pose.rotation;
+            // Get a list of markers with up-to-date data.
+            VarjoMarkers.GetVarjoMarkers(out markers);
 
-                    // Set the marker tracking mode
-                    if ((marker.flags == VarjoMarkerFlags.DoPrediction) != trackedObjects[i].dynamicTracking)
+            // Loop through found markers and update gameobjects matching the marker ID in the array.
+            foreach (var marker in markers)
+            {
+                for (var i = 0; i < trackedObjects.Length; i++)
+                {
+                    if (trackedObjects[i].id == marker.id)
+                    {
+                        // This simple marker manager controls only visibility and pose of the GameObjects.
+                        trackedObjects[i].gameObject.SetActive(true);
+                        if(!trackedObjects[i].alreadyPlaced){
+                          trackedObjects[i].gameObject.transform.localPosition = marker.pose.position;
+                          trackedObjects[i].gameObject.transform.localRotation = marker.pose.rotation;
+                          trackedObjects[i].alreadyPlaced=true;
+                        }
+
+                        // Set the marker tracking mode
+                        if ((marker.flags == VarjoMarkerFlags.DoPrediction) != trackedObjects[i].dynamicTracking)
                         {
                             if (trackedObjects[i].dynamicTracking)
                             {
@@ -70,24 +74,24 @@ public class VarjoMarkerManager : MonoBehaviour
                                 VarjoMarkers.RemoveVarjoMarkerFlags(marker.id, VarjoMarkerFlags.DoPrediction);
                             }
                         }
+                    }
                 }
             }
-        }
 
-        // Get a list of IDs of removed markers.
-        VarjoMarkers.GetRemovedVarjoMarkerIds(out removedMarkerIds);
+            // Get a list of IDs of removed markers.
+            VarjoMarkers.GetRemovedVarjoMarkerIds(out removedMarkerIds);
 
-        // Loop through removed marker IDs and deactivate gameobjects matching the marker IDs in the array.
-        foreach (var id in removedMarkerIds)
-        {
-            for (var i = 0; i < trackedObjects.Length; i++)
+            // Loop through removed marker IDs and deactivate gameobjects matching the marker IDs in the array.
+            foreach (var id in removedMarkerIds)
             {
-                if (trackedObjects[i].id == id)
+                for (var i = 0; i < trackedObjects.Length; i++)
                 {
-                    trackedObjects[i].gameObject.SetActive(false);
+                    if (trackedObjects[i].id == id)
+                    {
+                        trackedObjects[i].gameObject.SetActive(false);
+                    }
                 }
             }
         }
-    }
     }
 }
