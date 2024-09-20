@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes: []
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c8d05ee006871ed4997366980ee250ef, type: 2}
     Varjo.XR.Settings: {fileID: 11400000, guid: a90b4851ea40f0b40a2a967eefef4bae, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: cbcff64436750af4c9f64c8293dd287d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 577caffcb60fb4b4fb50310a57014920, type: 2}
