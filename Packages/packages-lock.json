@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.meta.xr.sdk.core": {
+      "version": "68.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.siccity.gltfutility": {
       "version": "https://github.com/siccity/gltfutility.git",
       "depth": 0,
@@ -279,12 +286,13 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.xr.oculus": {
-      "version": "4.2.0",
+    "com.unity.xr.meta-openxr": {
+      "version": "1.0.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.management": "4.4.0"
+        "com.unity.xr.openxr": "1.7.0",
+        "com.unity.xr.arfoundation": "5.1.0-pre.6"
       },
       "url": "https://packages.unity.com"
     },
