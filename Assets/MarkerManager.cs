@@ -9,19 +9,19 @@ public class MarkerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (LoaderUtility
-            .GetActiveLoader()?
-            .GetLoadedSubsystem<XRCameraSubsystem>() != null)
-        {
-            Debug.Log("funziona");
-        }else{
-            Debug.Log("Non funziona");
-        }
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
+ if (LoaderUtility
+            .GetActiveLoader()?
+            .GetLoadedSubsystem<XRPlaneSubsystem>() != null)
+        {
+            Debug.Log("funziona");
+        }else{
+            Debug.Log("Non funziona");
+        }
     }
 }
