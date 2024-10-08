@@ -10,6 +10,7 @@ public class UISettings : MonoBehaviour
     public void confermaImpostazioni(){
         Debug.Log("gravità:"+gravityToggle.isOn);
         SettingsManager.instance.gravity = gravityToggle.isOn;
-        SettingsManager.instance.spawna(); // da eliminare
+        MainManager.instance.startExperience();
+        //SettingsManager.instance.spawna(); // da eliminare
     }
 }

@@ -19,13 +19,4 @@ public class SettingsManager : MonoBehaviour
         }
     }
 
-    //da eliminare
-    public void spawna(){
-        GameObject instantiated = Instantiate(prefab);
-        instantiated.transform.position = new Vector3(0,1,1);
-        if(gravity){
-        instantiated.GetComponent<XRGrabInteractable>().forceGravityOnDetach = true;
-        instantiated.GetComponent<Rigidbody>().isKinematic = false;
-        }
-    }
 }
