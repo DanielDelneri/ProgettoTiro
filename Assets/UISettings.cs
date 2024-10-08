@@ -9,5 +9,7 @@ public class UISettings : MonoBehaviour
     [SerializeField] Toggle noGravityToggle;
     public void confermaImpostazioni(){
         Debug.Log("gravità:"+gravityToggle.isOn);
+        SettingsManager.instance.gravity = gravityToggle.isOn;
+        SettingsManager.instance.spawna(); // da eliminare
     }
 }
