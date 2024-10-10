@@ -14,14 +14,16 @@ public class UISettings : MonoBehaviour
 
     [SerializeField] GameObject board;
     public void confermaImpostazioni(){
+
+
         Debug.Log("gravità:"+gravityToggle.isOn);
         SettingsManager.instance.gravity = gravityToggle.isOn;
-        
+        board.SetActive(true);
         foreach(var plane in planeManager.trackables){
             if(plane.classification == PlaneClassification.Table){
                 board.transform.position = plane.gameObject.transform.position;
                 board.transform.rotation = plane.gameObject.transform.rotation;
-                board.transform.Rotate(0,-90,0);
+                board.transform.Rotate(0,-180,0);
                 board.transform.position+=new Vector3(0,0.05f,0);
             }
         }
@@ -29,4 +31,7 @@ public class UISettings : MonoBehaviour
         MainManager.instance.startExperience();
         //SettingsManager.instance.spawna(); // da eliminare
     }
+
+    
+
 }
