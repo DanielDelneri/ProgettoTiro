@@ -23,7 +23,7 @@ public class UISettings : MonoBehaviour
             if(plane.classification == PlaneClassification.Table){
                 board.transform.position = plane.gameObject.transform.position;
                 board.transform.rotation = plane.gameObject.transform.rotation;
-                board.transform.Rotate(0,-180,0);
+                //board.transform.Rotate(0,180,0);
                 board.transform.position+=new Vector3(0,0.05f,0);
             }
         }

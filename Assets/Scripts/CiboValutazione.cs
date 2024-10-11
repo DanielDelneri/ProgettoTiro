@@ -8,7 +8,7 @@ public class CiboValutazione
 {     
     public GameObject cibo;
 
-    public Valutazione valutazione;
+    public Valutazione valutazione_ansia,valutazione_craving;
 
     [Serializable]
     public enum Valutazione{
