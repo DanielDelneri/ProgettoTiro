@@ -1046,6 +1046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oo: {fileID: 336254808}
   feedbackBoard: {fileID: 1041728423}
+  feedbackBoardText: {fileID: 2141056099}
   foods:
   - cibo: {fileID: 6247426760504395091, guid: d8842018a7a62304891b846c8c60a394, type: 3}
     valutazione_ansia: 0
@@ -3061,6 +3062,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8348423061939033190, guid: d661f645c81f29b4aa596207971ae441, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348423061939033190, guid: d661f645c81f29b4aa596207971ae441, type: 3}
+      propertyPath: m_ReturnToInitialPosition
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

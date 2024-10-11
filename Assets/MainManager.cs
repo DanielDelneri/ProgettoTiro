@@ -14,6 +14,8 @@ public class MainManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI oo;
     [SerializeField] GameObject feedbackBoard;
 
+    [SerializeField] TextMeshProUGUI feedbackBoardText;
+
     public List<CiboValutazione> foods;
 
     private int current;
@@ -52,11 +54,13 @@ public class MainManager : MonoBehaviour
 
             firstEvaluation = false;
             foods[current].valutazione_ansia = value;
+            feedbackBoardText.text = "Craving";
+
         }
         else
         {
             foods[current].valutazione_craving = value;
-            if (current >= foods.Count-1)
+            if (current >= foods.Count - 1)
             {
                 //fine
             }
@@ -65,6 +69,7 @@ public class MainManager : MonoBehaviour
                 Destroy(lastInstantiated);
                 current++;
                 firstEvaluation = true;
+                feedbackBoardText.text = "Ansia";
                 nextFood();
             }
         }
