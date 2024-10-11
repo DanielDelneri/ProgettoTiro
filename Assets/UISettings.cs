@@ -28,9 +28,6 @@ public class UISettings : MonoBehaviour
 
     public void confermaImpostazioni()
     {
-
-
-        Debug.Log("gravità:" + gravityToggle.isOn);
         SettingsManager.instance.gravity = gravityToggle.isOn;
         board.SetActive(true);
         foreach (var plane in planeManager.trackables)
@@ -63,6 +60,14 @@ public class UISettings : MonoBehaviour
             modificaPiattoButton.colors = cb;
             piatto.GetComponent<XRGrabInteractable>().enabled = false;
             piatto.GetComponent<XRGeneralGrabTransformer>().enabled = false;
+            Vector3 pos = board.transform.position;
+            pos.x = piatto.gameObject.transform.position.x;
+            pos.z = piatto.gameObject.transform.position.z;
+            board.transform.position = pos;
+            board.transform.position += new Vector3(0, 0, 0.3f);
+            //board.transform.Rotate(0,180,0);
+            board.SetActive(true);
+
         }
         else
         {
@@ -70,6 +75,7 @@ public class UISettings : MonoBehaviour
             cb.normalColor = Color.green;
             modificaPiattoButton.colors = cb;
             piatto.GetComponent<XRGrabInteractable>().enabled = true;
+            board.SetActive(false);
             piatto.GetComponent<XRGeneralGrabTransformer>().enabled = true;
         }
 
