@@ -1046,15 +1046,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oo: {fileID: 336254808}
   feedbackBoard: {fileID: 1041728423}
+  piatto: {fileID: 1214351893}
   feedbackBoardText: {fileID: 2141056099}
   foods:
-  - cibo: {fileID: 6247426760504395091, guid: d8842018a7a62304891b846c8c60a394, type: 3}
+  - cibo: {fileID: 5576118986521016842, guid: fd268d531a346f643b3c712575ff3de7, type: 3}
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 6247426760504395091, guid: a6dc4a1e8a394854b9231cecb207d680, type: 3}
+  - cibo: {fileID: 5576118986521016842, guid: 4b18c199d5b6ad24fb48c8b6dd34712f, type: 3}
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 6247426760504395091, guid: e8e6a74c760d01941a8c21f485541eae, type: 3}
+  - cibo: {fileID: 5576118986521016842, guid: 142158364fd3a21479dbe436ed49beb1, type: 3}
     valutazione_ansia: 0
     valutazione_craving: 0
 --- !u!4 &231271358
@@ -4175,7 +4176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1041728424
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -62,7 +62,8 @@ public class UISettings : MonoBehaviour
                 pos.z = piatto.gameObject.transform.position.z;
                 pos.y = plane.gameObject.transform.position.y;
                 board.transform.position = pos;
-                board.transform.position += new Vector3(0, 0, 0.3f);
+                board.transform.position += new Vector3(0, 0.05f, 0.3f);
+                board.transform.rotation = plane.gameObject.transform.rotation;
                 //board.transform.Rotate(0,180,0);
             }
         }

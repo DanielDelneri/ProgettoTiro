@@ -16,7 +16,7 @@ public class UISettingsPanelSwitch : MonoBehaviour
 
     public void nextPanel(){
         panels[current].SetActive(false);
-        if(current<panels.Count){
+        if(current<panels.Count-1){
         current++;
         panels[current].SetActive(true);
         }

@@ -14,6 +14,8 @@ public class MainManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI oo;
     [SerializeField] GameObject feedbackBoard;
 
+    [SerializeField] GameObject piatto;
+
     [SerializeField] TextMeshProUGUI feedbackBoardText;
 
     public List<CiboValutazione> foods;
@@ -81,12 +83,13 @@ public class MainManager : MonoBehaviour
     }
     public void nextFood()
     {
-        lastInstantiated = Instantiate(foods[current].cibo);
-        lastInstantiated.transform.position = new Vector3(0, 1.5f, 1);
+        lastInstantiated = Instantiate(foods[current].cibo,piatto.transform.position,Quaternion.identity);
+        //lastInstantiated.transform.position = new Vector3(0, 1.5f, 1);
         if (SettingsManager.instance.gravity)
         {
-            lastInstantiated.GetComponent<XRGrabInteractable>().forceGravityOnDetach = true;
-            lastInstantiated.GetComponent<Rigidbody>().isKinematic = false;
+            lastInstantiated.transform.GetChild(0).GetComponent<XRGrabInteractable>().forceGravityOnDetach = true;
+            lastInstantiated.transform.GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
         }
+
     }
 }
