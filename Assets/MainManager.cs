@@ -20,6 +20,8 @@ public class MainManager : MonoBehaviour
 
     public List<CiboValutazione> foods;
 
+    private List<CiboValutazione> foodsAnsia;
+
     private int current;
 
     private GameObject lastInstantiated;
@@ -34,18 +36,25 @@ public class MainManager : MonoBehaviour
             instance = this;
             current = 0;
             firstEvaluation = true;
+
+            foodsAnsia = new List<CiboValutazione>();
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+    private void inscerisciCiboAnsia(CiboValutazione cibo){
+        if(foodsAnsia.Count<8){
+            foodsAnsia.Add(cibo);
+        }else{
+            int j=-1;
+            for(int i=0;i<8;i++){
+                if(cibo.valutazione_ansia>foodsAnsia[i].valutazione_ansia){
+                    j=i;
+                }
+            }
+            if(j!=-1){
+                foodsAnsia[j]=cibo;
+            }
+        }
     }
 
     public void currentEvaluation(CiboValutazione.Valutazione value)
@@ -56,6 +65,7 @@ public class MainManager : MonoBehaviour
 
             firstEvaluation = false;
             foods[current].valutazione_ansia = value;
+            inscerisciCiboAnsia(foods[current]);
             feedbackBoardText.text = "Craving";
 
         }
@@ -65,6 +75,9 @@ public class MainManager : MonoBehaviour
             if (current >= foods.Count - 1)
             {
                 //fine
+                foreach(CiboValutazione cib in foodsAnsia){
+                    oo.text=oo.text+cib.Nome+'\n';
+                }
             }
             else
             {
