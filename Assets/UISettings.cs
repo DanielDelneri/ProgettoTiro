@@ -22,11 +22,9 @@ public class UISettings : MonoBehaviour
     [SerializeField] UISettingsPanelSwitch uISettingsPanelSwitch;
 
 
-    private bool modificandoPiatto;
 
     void Awake()
     {
-        modificandoPiatto = false;
     }
 
     public void confermaGravita()
@@ -41,6 +39,7 @@ public class UISettings : MonoBehaviour
                 piatto.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
             }
         }
+        attivaSpostamentoPiatto();
         uISettingsPanelSwitch.nextPanel();
     }
 
@@ -48,6 +47,7 @@ public class UISettings : MonoBehaviour
     {
         uISettingsPanelSwitch.nextPanel();
         board.SetActive(true);
+        disattivaSpostamentoPiatto();
         foreach (var plane in planeManager.trackables)
         {
             if (plane.classification == PlaneClassification.Table)
@@ -72,27 +72,19 @@ public class UISettings : MonoBehaviour
         //SettingsManager.instance.spawna(); // da eliminare
     }
 
-    public void spostaPiatto()
-    {
-        if (modificandoPiatto)
-        {
-            ColorBlock cb = modificaPiattoButton.colors;
-            cb.normalColor = Color.blue;
-            modificaPiattoButton.colors = cb;
-            piatto.GetComponent<XRGrabInteractable>().enabled = false;
-            piatto.GetComponent<XRGeneralGrabTransformer>().enabled = false;
-        }
-        else
-        {
-            ColorBlock cb = modificaPiattoButton.colors;
-            cb.normalColor = Color.green;
-            modificaPiattoButton.colors = cb;
-            piatto.GetComponent<XRGrabInteractable>().enabled = true;
-            piatto.GetComponent<XRGeneralGrabTransformer>().enabled = true;
-        }
 
-        modificandoPiatto = !modificandoPiatto;
+    private void attivaSpostamentoPiatto()
+    {
+        piatto.GetComponent<XRGrabInteractable>().enabled = true;
+        piatto.GetComponent<XRGeneralGrabTransformer>().enabled = true;
     }
+
+    private void disattivaSpostamentoPiatto()
+    {
+        piatto.GetComponent<XRGrabInteractable>().enabled = false;
+        piatto.GetComponent<XRGeneralGrabTransformer>().enabled = false;
+    }
+
 
 
 }
