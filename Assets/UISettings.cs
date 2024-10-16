@@ -21,6 +21,7 @@ public class UISettings : MonoBehaviour
 
     [SerializeField] UISettingsPanelSwitch uISettingsPanelSwitch;
 
+    [SerializeField] GameObject slider;
 
 
     void Awake()
@@ -64,6 +65,12 @@ public class UISettings : MonoBehaviour
                 board.transform.position = pos;
                 board.transform.position += new Vector3(0, 0.05f, 0.3f);
                 board.transform.rotation = plane.gameObject.transform.rotation;
+
+                slider.SetActive(true);
+                Vector3 pos2 = pos;
+                pos2.y = slider.transform.position.y;
+                pos2.z-=0.2f;
+                slider.transform.position = pos2;
                 //board.transform.Rotate(0,180,0);
             }
         }

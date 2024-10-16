@@ -105,4 +105,8 @@ public class MainManager : MonoBehaviour
         }
 
     }
+
+    public void debug(int value,float fval){
+        oo.text=oo.text+value+" "+fval+"\n";
+    }
 }
