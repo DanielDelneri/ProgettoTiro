@@ -68,6 +68,7 @@ public class UISettings : MonoBehaviour
 
                 slider.SetActive(true);
                 Vector3 pos2 = pos;
+                pos2.x-=0.2f;
                 pos2.y = slider.transform.position.y;
                 pos2.z-=0.2f;
                 slider.transform.position = pos2;
