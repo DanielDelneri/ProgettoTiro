@@ -106,7 +106,7 @@ public class MainManager : MonoBehaviour
 
     }
 
-    public void debug(int value,float fval){
-        oo.text=oo.text+value+" "+fval+"\n";
+    public void debug(string ou){
+        oo.text=ou;
     }
 }

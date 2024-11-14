@@ -36,6 +36,8 @@ public class UISettings : MonoBehaviour
             if (plane.classification == PlaneClassification.Table)
             {
                 piatto.transform.position = plane.gameObject.transform.position;
+                MainManager.instance.debug(piatto.transform.name +  piatto.name + "");
+
                 piatto.transform.position += new Vector3(0, 0.01f, 0);
                 piatto.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
             }
@@ -68,9 +70,9 @@ public class UISettings : MonoBehaviour
 
                 slider.SetActive(true);
                 Vector3 pos2 = pos;
-                pos2.x-=0.2f;
+                pos2.x -= 0.2f;
                 pos2.y = slider.transform.position.y;
-                pos2.z-=0.2f;
+                pos2.z -= 0.2f;
                 slider.transform.position = pos2;
                 //board.transform.Rotate(0,180,0);
             }
@@ -85,6 +87,8 @@ public class UISettings : MonoBehaviour
     {
         piatto.GetComponent<XRGrabInteractable>().enabled = true;
         piatto.GetComponent<XRGeneralGrabTransformer>().enabled = true;
+        MainManager.instance.debug("\n"+piatto.transform.position + "");
+
     }
 
     private void disattivaSpostamentoPiatto()
