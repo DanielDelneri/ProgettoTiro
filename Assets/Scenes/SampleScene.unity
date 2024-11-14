@@ -1049,15 +1049,15 @@ MonoBehaviour:
   piatto: {fileID: 1214351893}
   feedbackBoardText: {fileID: 2141056099}
   foods:
-  - cibo: {fileID: 5576118986521016842, guid: fd268d531a346f643b3c712575ff3de7, type: 3}
-    Nome: Cibo1
+  - cibo: {fileID: 8861908305832835998, guid: fc352ed8eb6fe5643a100f6641961b96, type: 3}
+    Nome: Sandwich
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 5576118986521016842, guid: 4b18c199d5b6ad24fb48c8b6dd34712f, type: 3}
+  - cibo: {fileID: 8861908305832835998, guid: fc352ed8eb6fe5643a100f6641961b96, type: 3}
     Nome: Cibo2
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 5576118986521016842, guid: 142158364fd3a21479dbe436ed49beb1, type: 3}
+  - cibo: {fileID: 5576118986521016842, guid: 4b18c199d5b6ad24fb48c8b6dd34712f, type: 3}
     Nome: Cibo3
     valutazione_ansia: 0
     valutazione_craving: 0
