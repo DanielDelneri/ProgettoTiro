@@ -36,7 +36,6 @@ public class UISettings : MonoBehaviour
             if (plane.classification == PlaneClassification.Table)
             {
                 piatto.transform.position = plane.gameObject.transform.position;
-                MainManager.instance.debug(piatto.transform.name +  piatto.name + "");
 
                 piatto.transform.position += new Vector3(0, 0.01f, 0);
                 piatto.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
@@ -87,7 +86,7 @@ public class UISettings : MonoBehaviour
     {
         piatto.GetComponent<XRGrabInteractable>().enabled = true;
         piatto.GetComponent<XRGeneralGrabTransformer>().enabled = true;
-        MainManager.instance.debug("\n"+piatto.transform.position + "");
+
 
     }
 
