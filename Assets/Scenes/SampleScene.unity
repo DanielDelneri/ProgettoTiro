@@ -1061,27 +1061,27 @@ MonoBehaviour:
     Nome: Cibo3
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 5576118986521016842, guid: 142158364fd3a21479dbe436ed49beb1, type: 3}
+  - cibo: {fileID: 3399144650855233214, guid: 9b7852a0e80022b40826c77d7b4d1647, type: 3}
     Nome: Cibo4
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 5576118986521016842, guid: 142158364fd3a21479dbe436ed49beb1, type: 3}
+  - cibo: {fileID: 3786919917582607204, guid: 6e4c4423044abf947a9b84512044602d, type: 3}
     Nome: Cibo5
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 5576118986521016842, guid: 4b18c199d5b6ad24fb48c8b6dd34712f, type: 3}
+  - cibo: {fileID: 1844861340001273815, guid: c2303a4cf648c254ca97092fb2494ba3, type: 3}
     Nome: Cibo6
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 5576118986521016842, guid: 142158364fd3a21479dbe436ed49beb1, type: 3}
+  - cibo: {fileID: 7824473717891656035, guid: e3964089fde1b8d4baff1df861f33ac4, type: 3}
     Nome: Cibo7
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 5576118986521016842, guid: 142158364fd3a21479dbe436ed49beb1, type: 3}
+  - cibo: {fileID: 4337010713010917191, guid: d24308c27920a4f43975d5a8b607674f, type: 3}
     Nome: Cibo8
     valutazione_ansia: 0
     valutazione_craving: 0
-  - cibo: {fileID: 5576118986521016842, guid: 142158364fd3a21479dbe436ed49beb1, type: 3}
+  - cibo: {fileID: 4604661285834450546, guid: 2a27262cef5940047ac93395a5702743, type: 3}
     Nome: Cibo9
     valutazione_ansia: 0
     valutazione_craving: 0
