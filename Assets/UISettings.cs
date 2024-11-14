@@ -64,8 +64,9 @@ public class UISettings : MonoBehaviour
                 pos.z = piatto.gameObject.transform.position.z;
                 pos.y = plane.gameObject.transform.position.y;
                 board.transform.position = pos;
-                board.transform.position += new Vector3(0, 0.05f, 0.3f);
+                board.transform.position += new Vector3(0.5f, 0.05f, 0.15f);
                 board.transform.rotation = plane.gameObject.transform.rotation;
+                board.transform.Rotate(0,35,0);
 
                 slider.SetActive(true);
                 Vector3 pos2 = pos;
