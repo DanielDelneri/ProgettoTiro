@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -59,14 +60,15 @@ public class UISettings : MonoBehaviour
                 board.transform.rotation = plane.gameObject.transform.rotation;
                 //board.transform.Rotate(0,180,0);
                 board.transform.position += new Vector3(0, 0.05f, 0);*/
+
                 Vector3 pos = board.transform.position;
-                pos.x = piatto.gameObject.transform.position.x;
+                pos.x = piatto.transform.position.x;
+                pos.y = plane.transform.position.y;
                 pos.z = piatto.gameObject.transform.position.z;
-                pos.y = plane.gameObject.transform.position.y;
                 board.transform.position = pos;
                 board.transform.position += new Vector3(0.5f, 0.05f, 0.15f);
                 board.transform.rotation = plane.gameObject.transform.rotation;
-                board.transform.Rotate(0,35,0);
+                board.transform.Rotate(0, 35, 0);
 
                 slider.SetActive(true);
                 Vector3 pos2 = pos;

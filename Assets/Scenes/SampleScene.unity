@@ -1054,35 +1054,35 @@ MonoBehaviour:
     valutazione_ansia: 0
     valutazione_craving: 0
   - cibo: {fileID: 2099360597932864918, guid: 1cfb643614e687547a26423a4c7522b9, type: 3}
-    Nome: Cibo2
+    Nome: Muffin
     valutazione_ansia: 0
     valutazione_craving: 0
   - cibo: {fileID: 2733508719101815524, guid: d6efb8f5a4e1a6b438801410c08ffb02, type: 3}
-    Nome: Cibo3
+    Nome: Donut
     valutazione_ansia: 0
     valutazione_craving: 0
   - cibo: {fileID: 3399144650855233214, guid: 9b7852a0e80022b40826c77d7b4d1647, type: 3}
-    Nome: Cibo4
+    Nome: Banana
     valutazione_ansia: 0
     valutazione_craving: 0
   - cibo: {fileID: 3786919917582607204, guid: 6e4c4423044abf947a9b84512044602d, type: 3}
-    Nome: Cibo5
+    Nome: Pane
     valutazione_ansia: 0
     valutazione_craving: 0
   - cibo: {fileID: 1844861340001273815, guid: c2303a4cf648c254ca97092fb2494ba3, type: 3}
-    Nome: Cibo6
+    Nome: Formaggio
     valutazione_ansia: 0
     valutazione_craving: 0
   - cibo: {fileID: 7824473717891656035, guid: e3964089fde1b8d4baff1df861f33ac4, type: 3}
-    Nome: Cibo7
+    Nome: Brioche cioccolato
     valutazione_ansia: 0
     valutazione_craving: 0
   - cibo: {fileID: 4337010713010917191, guid: d24308c27920a4f43975d5a8b607674f, type: 3}
-    Nome: Cibo8
+    Nome: Cupcake
     valutazione_ansia: 0
     valutazione_craving: 0
   - cibo: {fileID: 4604661285834450546, guid: 2a27262cef5940047ac93395a5702743, type: 3}
-    Nome: Cibo9
+    Nome: Sweet Bread Roll
     valutazione_ansia: 0
     valutazione_craving: 0
 --- !u!4 &231271358
@@ -4909,7 +4909,7 @@ MonoBehaviour:
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 0
+  m_SmoothPosition: 1
   m_SmoothPositionAmount: 8
   m_TightenPosition: 0.1
   m_TrackRotation: 0
