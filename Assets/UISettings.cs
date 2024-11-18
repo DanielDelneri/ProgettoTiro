@@ -77,7 +77,6 @@ public class UISettings : MonoBehaviour
                 board.transform.rotation = plane.gameObject.transform.rotation;
                 board.transform.Rotate(0, 35, 0);
 
-                slider.SetActive(true);
                 Vector3 pos2 = pos;
                 pos2.x -= 0.2f;
                 pos2.y = slider.transform.position.y;

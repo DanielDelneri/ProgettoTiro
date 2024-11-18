@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -112,8 +113,16 @@ public class MainManager : MonoBehaviour
     }
 
     private void seralizeList(string fileName, List<CiboValutazione> foods){ // crea un file json a partire dalla List<CiboValutazione>
+        try{
         string json;
-        json = JsonUtility.ToJson(foods);
-        oo.text=json;
+        json = JsonHelper.ToJson(foods);
+        string path = Path.Combine(Application.persistentDataPath, fileName+".txt");
+        StreamWriter file = new StreamWriter(path,false);
+        file.Write(json);
+        file.Close();
+        }catch(Exception e){
+            oo.text=e.Message;
+        }
+       // oo.text=json;
     }
 }
