@@ -48,7 +48,7 @@ public class UISettings : MonoBehaviour
 
     public void confermaMetodoFeedback()
     {
-        SettingsManager.instance.impostaFeedback(feedbackBoardToggle.isOn);
+        piatto.SetActive(true);
         attivaSpostamentoPiatto();
         uISettingsPanelSwitch.nextPanel();
     }
@@ -56,6 +56,7 @@ public class UISettings : MonoBehaviour
     public void confermaImpostazioni()
     {
         uISettingsPanelSwitch.nextPanel();
+        SettingsManager.instance.impostaFeedback(feedbackBoardToggle.isOn);
         board.SetActive(true);
         disattivaSpostamentoPiatto();
         foreach (var plane in planeManager.trackables)
