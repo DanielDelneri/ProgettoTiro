@@ -6573,6 +6573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pulsantiera: {fileID: 1041728423}
   slider: {fileID: 812680525}
+  origin: {fileID: 2218496724294063393}
   gravity: 0
 --- !u!4 &1380054286
 Transform:

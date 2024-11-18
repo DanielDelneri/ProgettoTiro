@@ -12,6 +12,8 @@ public class SettingsManager : MonoBehaviour
    [SerializeField] GameObject pulsantiera;
    [SerializeField] GameObject slider;
 
+   [SerializeField] public GameObject origin;
+
     public bool gravity;
 
     void Awake(){

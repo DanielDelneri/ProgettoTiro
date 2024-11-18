@@ -76,7 +76,12 @@ public class UISettings : MonoBehaviour
                 board.transform.position = pos;
                 board.transform.position += new Vector3(0.5f, 0.05f, 0.15f);
                 board.transform.rotation = plane.gameObject.transform.rotation;
-                board.transform.Rotate(0, 35, 0);
+                board.transform.LookAt(SettingsManager.instance.origin.transform.position);
+                Quaternion quaternion = board.transform.rotation;
+                quaternion.x = 0;
+                quaternion.z = 0;
+                board.transform.rotation = quaternion;
+                board.transform.Rotate(0, 180, 0);
 
                 Vector3 pos2 = pos;
                 pos2.x -= 0.2f;
