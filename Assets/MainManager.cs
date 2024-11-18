@@ -76,10 +76,14 @@ public class MainManager : MonoBehaviour
             if (current >= foods.Count - 1)
             {
                 //fine
-                foreach(CiboValutazione cib in foodsAnsia){
+                /*foreach(CiboValutazione cib in foodsAnsia){
                    // oo.text=oo.text+cib.Nome+'\n';
-                }
+                }*/
+                SettingsManager.instance.fine();
+                Destroy(lastInstantiated);
+                piatto.SetActive(false);
                 seralizeList("valutazioneCompleta",foods);
+                seralizeList("valutazioneCibi8",foodsAnsia);
             }
             else
             {

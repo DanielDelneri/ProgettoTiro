@@ -28,4 +28,9 @@ public class SettingsManager : MonoBehaviour
         }
     }
 
+    public void fine(){
+        pulsantiera.SetActive(false);
+        slider.SetActive(false);
+    }
+
 }
