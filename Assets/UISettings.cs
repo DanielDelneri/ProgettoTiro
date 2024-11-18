@@ -81,20 +81,20 @@ public class UISettings : MonoBehaviour
                 quaternion.z = 0;
                 board.transform.rotation = quaternion;
                 board.transform.Rotate(0, 180, 0);
-                
+
                 Vector3 pos2 = pos;
                 pos2.x = piatto.transform.position.x;
                 pos2.y = slider.transform.position.y;
                 pos2.z = piatto.transform.position.z + 0.2f;
                 //GameObject sliderr = slider.transform.GetChild(0).gameObject;
-               GameObject sliderr = slider;
+                GameObject sliderr = slider;
                 sliderr.transform.position = pos2;
                 sliderr.transform.LookAt(SettingsManager.instance.origin.transform.position);
                 quaternion = sliderr.transform.rotation;
-                quaternion.x=0;
-                quaternion.z=0;
-                sliderr.transform.rotation=quaternion;
-                sliderr.transform.Rotate(0,180,0);
+                quaternion.x = 0;
+                quaternion.z = 0;
+                sliderr.transform.rotation = quaternion;
+                sliderr.transform.Rotate(0, 180, 0);
                 //board.transform.Rotate(0,180,0);}
             }
         }

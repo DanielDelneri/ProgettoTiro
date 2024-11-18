@@ -68,7 +68,6 @@ public class MainManager : MonoBehaviour
             foods[current].valutazione_ansia = value;
             inscerisciCiboAnsia(foods[current]);
             //feedbackBoardText.text = "Craving";
-            oo.text="dai:";
             SettingsManager.instance.setFeedbackText("Craving");
         }
         else

@@ -45,11 +45,9 @@ public class SettingsManager : MonoBehaviour
 
 
     public void setFeedbackText(string text){
-        MainManager.instance.debug("o:"+text);
         if(usingBoard){
             feedbackBoardText.text = text;
         }else{
-            MainManager.instance.debug(text);
             sliderText.text = text;
         }
     }
