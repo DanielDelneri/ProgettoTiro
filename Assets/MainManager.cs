@@ -76,8 +76,9 @@ public class MainManager : MonoBehaviour
             {
                 //fine
                 foreach(CiboValutazione cib in foodsAnsia){
-                    oo.text=oo.text+cib.Nome+'\n';
+                   // oo.text=oo.text+cib.Nome+'\n';
                 }
+                seralizeList("valutazioneCompleta",foods);
             }
             else
             {
@@ -108,5 +109,11 @@ public class MainManager : MonoBehaviour
 
     public void debug(string ou){
         oo.text=ou;
+    }
+
+    private void seralizeList(string fileName, List<CiboValutazione> foods){ // crea un file json a partire dalla List<CiboValutazione>
+        string json;
+        json = JsonUtility.ToJson(foods);
+        oo.text=json;
     }
 }

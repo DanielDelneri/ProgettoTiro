@@ -12,6 +12,7 @@ public class UISettings : MonoBehaviour
 {
     [SerializeField] Toggle gravityToggle;
     [SerializeField] Toggle noGravityToggle;
+    [SerializeField] Toggle feedbackBoardToggle;
 
     [SerializeField] ARPlaneManager planeManager;
 
@@ -42,6 +43,12 @@ public class UISettings : MonoBehaviour
                 piatto.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
             }
         }
+        uISettingsPanelSwitch.nextPanel();
+    }
+
+    public void confermaMetodoFeedback()
+    {
+        SettingsManager.instance.impostaFeedback(feedbackBoardToggle.isOn);
         attivaSpostamentoPiatto();
         uISettingsPanelSwitch.nextPanel();
     }
