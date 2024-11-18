@@ -17,7 +17,7 @@ public class MainManager : MonoBehaviour
 
     [SerializeField] GameObject piatto;
 
-    [SerializeField] TextMeshProUGUI feedbackBoardText;
+   // [SerializeField] TextMeshProUGUI feedbackBoardText;
 
     public List<CiboValutazione> foods;
 
@@ -67,8 +67,9 @@ public class MainManager : MonoBehaviour
             firstEvaluation = false;
             foods[current].valutazione_ansia = value;
             inscerisciCiboAnsia(foods[current]);
-            feedbackBoardText.text = "Craving";
-
+            //feedbackBoardText.text = "Craving";
+            oo.text="dai:";
+            SettingsManager.instance.setFeedbackText("Craving");
         }
         else
         {
@@ -90,7 +91,8 @@ public class MainManager : MonoBehaviour
                 Destroy(lastInstantiated);
                 current++;
                 firstEvaluation = true;
-                feedbackBoardText.text = "Ansia";
+                //feedbackBoardText.text = "Ansia";
+                SettingsManager.instance.setFeedbackText("Ansia");
                 nextFood();
             }
         }
@@ -129,4 +131,6 @@ public class MainManager : MonoBehaviour
         }
        // oo.text=json;
     }
+
+    
 }

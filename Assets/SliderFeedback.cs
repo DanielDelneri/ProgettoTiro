@@ -38,7 +38,7 @@ public class SliderFeedback : MonoBehaviour
             }
         }
 
-
+        MainManager.instance.debug(valutazione+"");
         MainManager.instance.currentEvaluation(valutazione);
     }
 }
