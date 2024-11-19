@@ -1402,6 +1402,10 @@ MonoBehaviour:
     Nome: Pane
     valutazione_ansia: 0
     valutazione_craving: 0
+  - cibo: {fileID: 6454434324665047130, guid: 43bc6ea9f2d256c43a170efa034ff809, type: 3}
+    Nome: Pesca
+    valutazione_ansia: 0
+    valutazione_craving: 0
   - cibo: {fileID: 1844861340001273815, guid: c2303a4cf648c254ca97092fb2494ba3, type: 3}
     Nome: Formaggio
     valutazione_ansia: 0
@@ -1416,6 +1420,10 @@ MonoBehaviour:
     valutazione_craving: 0
   - cibo: {fileID: 4604661285834450546, guid: 2a27262cef5940047ac93395a5702743, type: 3}
     Nome: Sweet Bread Roll
+    valutazione_ansia: 0
+    valutazione_craving: 0
+  - cibo: {fileID: 7594151589069671400, guid: 6c4146cf9255ae44981b2971fd89a266, type: 3}
+    Nome: Broccoli
     valutazione_ansia: 0
     valutazione_craving: 0
 --- !u!4 &231271358
