@@ -36,7 +36,7 @@ public class UISettings : MonoBehaviour
             if (plane.classification == PlaneClassification.Table)
             {
                 hCILab_Cube.transform.position = plane.gameObject.transform.position;
-                hCILab_Cube.transform.position += new Vector3(0, 0.12f, 0);
+                hCILab_Cube.transform.position += new Vector3(-0.5f, 0.12f, 0);
 
                 Vector3 targetPostition = new Vector3(plane.gameObject.transform.position.x,
                     hCILab_Cube.transform.position.y,
