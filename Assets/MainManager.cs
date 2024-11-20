@@ -114,7 +114,7 @@ public class MainManager : MonoBehaviour
     }
 
     public void debug(string ou){
-        oo.text=ou;
+        oo.text+=ou;
     }
 
     private void seralizeList(string fileName, List<CiboValutazione> foods){ // crea un file json a partire dalla List<CiboValutazione>

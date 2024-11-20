@@ -25,10 +25,8 @@ public class UISettings : MonoBehaviour
 
     [SerializeField] GameObject slider;
 
+    [SerializeField] GameObject hCILab_Cube;
 
-    void Awake()
-    {
-    }
 
     public void confermaGravita()
     {
@@ -37,6 +35,15 @@ public class UISettings : MonoBehaviour
         {
             if (plane.classification == PlaneClassification.Table)
             {
+                hCILab_Cube.transform.position = plane.gameObject.transform.position;
+                hCILab_Cube.transform.position += new Vector3(0, 0.12f, 0);
+
+                Vector3 targetPostition = new Vector3(plane.gameObject.transform.position.x,
+                    hCILab_Cube.transform.position.y,
+                                       plane.gameObject.transform.position.z);
+                hCILab_Cube.transform.LookAt(targetPostition);
+
+
                 piatto.transform.position = plane.gameObject.transform.position;
 
                 piatto.transform.position += new Vector3(0, 0.01f, 0);
@@ -99,6 +106,9 @@ public class UISettings : MonoBehaviour
             }
         }
 
+
+        Destroy(piatto.GetComponent<XRGrabInteractable>());
+        Destroy(piatto.GetComponent<XRGeneralGrabTransformer>());
         MainManager.instance.startExperience();
         //SettingsManager.instance.spawna(); // da eliminare
     }
